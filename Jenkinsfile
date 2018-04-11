@@ -79,7 +79,7 @@ node{
     }
   }
   stage("push-to-pcf"){
-    cf login api https://api.run.pivotal.io -u dhir28@gmail.com -p Pivotel@2018
-    cf push
+    sh "cf login api https://api.run.pivotal.io -u dhir28@gmail.com -p Pivotel@2018"
+    sh "cf push"
   }
 }
