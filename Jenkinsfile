@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 node{
   def workspace = env.WORKSPACE
   def sparseDir = '/home/dhirendra/eclipse-workspaces/spring-boot-web-jsp'
