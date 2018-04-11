@@ -75,7 +75,11 @@ node{
       def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
        if (qg.status != 'OK') {
           error "Pipeline aborted due to quality gate failure: ${qg.status}"
-       }
-   }
-}
+         }
+    }
+  }
+  stage("push-to-pcf"){
+    cf login api https://api.run.pivotal.io -u dhir28@gmail.com -p Pivotel@2018
+    cf push
+  }
 }
