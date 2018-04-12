@@ -4,7 +4,7 @@ node{
   def workspace = env.WORKSPACE
   def sparseDir = '/home/dhirendra/eclipse-workspaces/spring-boot-web-jsp'
   
-  /*stage('clean-workspace') {
+  stage('clean-workspace') {
    //cleanWs()
    echo "current working directory is : " 
    echo pwd
@@ -81,7 +81,7 @@ node{
   stage("push-to-pcf"){
     sh "cf login api https://api.run.pivotal.io -u dhir28@gmail.com -p Pivotel@2018 -o dhir-org -s development"
     sh "cf push"
-  }*/
+  }
   stage("Jmeter-p1"){
   //sh "cd ${workspace}/${sparseDir}/src/test/jmeter"
   sh "ls -l"
